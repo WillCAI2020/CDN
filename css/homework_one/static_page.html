@@ -1,0 +1,426 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>homework_one</title>
+	<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/WillCAI2020/cdn/css/homework_one.css">
+</head>
+<body>
+	<div class="header">
+		<ul class="header_ul">
+			<li class="header_ul_home"><a href="#homework" title="作业一：静态网站制作">作业</a></li>
+			<li class="header_ul_pages"><a href="#one" title="板块一：基本介绍">板块一</a></li>
+			<li class="header_ul_three"><a href="#two" title="板块一：超文本标记">板块二</a>
+				<ul class="header_ul_ul">
+					<li><a href="#引言">引言</a></li>
+					<li><a href="#基本框架">基本框架</a></li>
+					<li><a href="#样式与排版">样式与排版</a></li>
+					<li><a href="#表单">表单</a></li>
+				</ul>			
+			</li>
+		</ul>
+	</div>
+	<h1 id="homework">作业一：静态网站制作</h1>
+	<h2 id="one">板块一：基本介绍</h2>
+	<p>
+		&emsp;&emsp;当用户向网站访问一个网页，网站会把这个网页文件传给用户的客户机，然后客户机的浏览器就打开并展示信息内容。而传到客户机的网页文件并没有自身打开，也不需要自身打开。
+		我们看话剧的时候看到的是演员照着剧本演出的结果，观众是不用看剧本的。
+		<br>&emsp;&emsp;网页文件就是剧本或叫做脚本，隐藏在后台，其中包含演出内容和如何进行演出的指令。而浏览器就是演员，它在前台按照网页文件这个“剧本或者脚本”事先写好的内容和规定进行表演、展示。用户看到的是浏览器(遵照网页文件内写好的规定)进行“演出”的结果。<br>
+		<div class="container">
+		<img src="work.png" title="图片来自 Head First HTML 与 CSS" alt="工作">
+		</div>
+	</p>
+	
+	<p>
+		&emsp;&emsp;<em>HTML（HyperText Markup Language）</em>是超文本标记语言的缩写，通过HTML，我们利用标记来标示内容提供结构，并把匹配标记以及它们所包围的内容称为元素，然后浏览器会按照内置的默认规则显示各个元素。
+		<blockquote>
+		<ul>
+		<li>HTML 与 CSS 是我们用来创建网页的语言。</li>
+		<li><strong>元素由三部分组成：一个开始标记、内容和一个结束标记</strong>，但有些元素有例外（如&lt;br&gt;、&lt;img&gt;）。</li>
+		<li>开始标记可以有属性。</li>
+		<li>结束标记名前面有一个“/”，以确定这是一个结束标记。</li>
+		<li>所有页面都要有一个&lt;HTML&gt;元素，其中要有一个&lt;head&gt;元素和&lt;body&gt;元素，&lt;head&gt;元素存放网页的信息，&lt;body&gt;元素里的内容就是你将在浏览器里看到的东西。</li>
+		<li>大多数空白符（制表符、回车、空格）都会被浏览器忽略，不过可以利用空白符让你的 HTML（对人）更具有可读性。</li>
+		<li>可以在&lt;style&gt;元素中写 CSS 规则，来指定元素的特性，且&lt;style&gt;元素应放在&lt;head&gt;里。</li>
+		<li>HTML 标签对大小写不敏感，但为了可读性，建议书写一致。</li>
+		<li>“&lt;!-”与 "-&gt;"之间放置的所有内容都会被浏览器忽略！单引号“ ' ”可以注释一行。</li>
+		</ul>
+		</blockquote>
+		&emsp;&emsp;当然，我们完全可以不拘泥于默认设置，可以通过 <em>CSS（Cascading Style Sheets）层叠样式表</em> 来增加自己的样式和格式化规则，来确定字体、颜色、大小和页面的很多其它特征（元素中属性的用处也是这样），控制 HTML的表现。
+		<br>&emsp;&emsp;<em>下面开始介绍一些超文本标记。</em>
+	</p>
+	<h2 id="two">板块二：超文本标记</h2>
+	<h3 id="引言">引言</h3>
+	<p id="note">
+		&emsp;&emsp;大部分标记都是成对出现的，即一个开始标记和一个对应的结束标记。每一对标记就像是一对特殊括号，它们会把要展示的文章的一部分括起来，规定这部分内容要以某种位置、大小、颜色、字体进行突出展示，以便区别文章的其他部分，使得网页的版面丰富多彩。<br>
+		&emsp;&emsp;只有少量的标记是单个的，而不是成对的。
+	</p>
+		
+	<h3 id="基本框架">基本框架</h3>
+	<p id="code">
+	&lt;HTML&gt;<br>
+	&lt;head&gt;<br>
+	&lt;title&gt;标题&lt;/title&gt;<br>
+	&lt;/head&gt;<br>
+	&lt;body&gt;<br>
+	&lt;/body&gt;<br>
+	&lt;/HTML&gt;<br>
+	</p>
+	<ol>
+		<li>网页开始标记：&lt;HTML&gt;，网页结束标记：&lt;/HTML&gt;</li>
+		<li>头部开始标记：&lt;head&gt;网页结束标记：&lt;/head&gt;</li>
+		<li>浏览器标题栏标记：&lt;title&gt; 和 &lt;/title&gt;</li>
+		<li>网页窗体开始标记：&lt;body&gt;，网页窗体结束标记：&lt;/body&gt;<br>（网页中除了头部之外的所有内容都被他们括住，并在浏览器最主要的部分—窗体上显示）</li>
+	</ol>
+	<h3 id="样式与排版">样式与排版</h3>
+	<ol>
+		<li><strong>窗体背景颜色</strong>
+		<p>
+			可在窗体开始标记中加入"bgcolor=某种颜色表示"，如&lt;head bgcolor="某种颜色表示"&gt;
+		</p>
+		<p>
+			标记中添加的"bgcolor=某种颜色表示"称为属性，通过属性，我们可以表达一些特殊的需求。<br>属性标记一般都写在开始标记中，任何一个开始标记中可写入多个属性标记，且属性的顺序可任意。
+		</p>
+		<p>
+			再谈谈Web颜色的表示：Web颜色是按照构成颜色的红、绿、蓝三个分量所占数量来指定的，每种颜色会分别指定一个从0到100%的数值，然后把它们混合起来得到最终的颜色，如果把均为100%的红、绿、蓝混合在一起，就会得到白色！<br>
+			指定颜色的方法：
+			<ul>
+			<li><strong>按名指定</strong>
+			<p>如直接使用red、black、blue等等，但这种方法所能指定的颜色很有限。</p>
+			<li><strong>用红、绿、蓝指定</strong>
+			<p>如白色用 rgb(100%,100%,100%) 表示，橙色用 rgb(80%,40%,0%) 表示。<br>还可以将红、绿、蓝指定为0到255之间的一个数值，如橙色可用 rgb(204,102,0) 表示。</p>
+			<li><strong>使用十六进制码指定</strong>
+			<br>以“#”开头，其中每组两位数字分别代表颜色的红、绿、蓝分量，每位数都是一个十六进制数，橙色可用 #cc6600 表示，可将每组数转化为一个0到255的数，转化方法如下：</p>
+			</ul>
+		</p>		
+		</li>
+		<li><strong>标题</strong>
+		<p>
+			文章标题字的外观控制标记有&lt;h1&gt;和&lt;/h1&gt;，...，&lt;h6&gt;和&lt;/h6&gt;，一号字体最大，二号其次，六号最小。效果如下：<br>
+		</p>
+		</li>
+		<li><strong>字体</strong>
+		<p>		
+			文章内容字体的控制标记为：&lt;font&gt;和&lt;/font&gt;，还可以在开始标记中加入一些属性。如：<br>
+			<q>size=1~7（1号字最小，七号最大）</q><br><q>color=字体颜色（颜色即Web颜色）</q>
+		</p>
+		</li>
+		<li><strong>段落</strong>
+		<p>
+			段落标记为&lt;p&gt;和&lt;/p&gt;，它是一个块元素，块元素与上下文之间都有空行。<br>
+			
+		</p>
+		</li>
+		<li><strong>空格</strong>
+		<p>
+			一个汉字占两个空格大小，所以使用四个空格就可以达到首行缩进两个汉字的效果。
+		</p>
+		<p>
+			空格标记有如下几种表示：<br>
+			<ul>
+			<li><strong>&amp;nbsp;</strong>
+			<p>不换行空格，全称是 No-Break Space，它是最常见和我们使用最多的空格，是按下space键产生的空格，故要使用四个该标记才能缩进两个汉字。</p>
+			</li>
+			<li><strong>&amp;ensp;</strong>
+			<p>它叫“半角空格”，全称是 En Space，en是字体排印学的计量单位，为em宽度的一半。根据定义，它等同于字体度的一半（如16px字体中就是8px）。此空格有个相当稳健的特性，就是其占据的宽度正好是1/2个中文宽度，而且基本上不受字体影响。</p>
+			<li><strong>&amp;emsp;</strong>
+			<p>它叫“全角空格”，全称是 Em Space，em是字体排印学的计量单位，相当于当前指定的点数。例如，1 em在16px的字体中就是16px。此空格也有个相当稳健的特性，就是其占据的宽度正好是1个中文宽度，而且基本上不受字体影响。</p>
+			......
+			</ul>
+		</p>
+		<p>
+			<em>使用效果如下：</em><br>
+			这里没有使用空格标记<br>
+			&nbsp;这里使用了一个&amp;nbsp;<br>
+			&ensp;这里使用了一个&amp;ensp;<br>
+			&emsp;这里使用了一个&amp;emsp;<br>
+		</p>
+		</li>
+		<li><strong>回车</strong>
+		<p>
+			回车标记为&lt;br&gt;，每使用一个回车标记便会换一行，该标记是一个空（void）元素，即该元素没有内容，当需要使用 void 元素时，只需使用一个开始标记，这是一种方便的简写形式，可以减少 HTML 中的标记数量。
+		</p>
+		</li>
+		<li><strong>左、中、右对齐属性</strong>
+		<p>
+			属性标记为 align="left/center/right"，它可以使某些内容靠左对齐或居中对齐或靠右对齐。如对于代码 &lt;h4 align="center"&gt;我被居中了&lt;/h4&gt;，其效果如下：<h4 align="center">我被居中了</h4>
+		</p>
+		</li>
+		<li><strong>超链接标记</strong>
+		<p>
+			标记为&lt;a&gt;和&lt;/a&gt;，在网页上一段文字或一个图片，被这一对儿特殊的括号括起来之后，就成为超级连接，用户点击这个超级连接之后，就会从当前的网页转向（打开)另外一个(目标)网页。
+		</p>
+		<p>
+			为了用户点击超级连接后，用户的浏览器能够转向目标网页，就必须在开始标记中写出目标网页的网址，属性标记 href="目标地址",就是做这个用途的。<br>
+			<em>href（hypertextreference）</em>的含义是超文本引用，目标地址可以使用相对路径或绝对路径（HTML 中的路径都要用“ / ”）。<br>
+			<blockquote>
+			在浏览器输入的 Web 地址称为 URL，或统一资源定位符（Uniform Resource Locators），它是一个全局地址，可用来定位 Web 上的任意资源，包括 HTML 页面、音频、视频和其它很多形式的 Web 内容。<br>
+			除了指定资源的位置，URL 还可以指定用来获取资源的协议：HTTP（HyperText Transfer Protocol）也称为超文本传输协议。
+			</blockquote>
+			使用&lt;a href="https://vpn.muc.edu.cn/portal/#!/login"&gt;前往民大VPN登陆界面&lt;/a&gt;，效果为：<a href="https://vpn.muc.edu.cn/portal/#!/login">前往民大VPN登陆界面</a>
+		</p>
+		</li>
+		<li><strong>图像标记</strong>
+		<p>
+			标记为&lt;img&gt;，该元素也是个void元素，需要用到属性 src="图片地址"。此外还可选用属性：
+			<ul>
+			<li><strong>高度与宽度属性</strong>
+			<p>width="像素数" height="像素数" 分别指定图像的宽度和高度</p>
+			</li>
+			<li><strong>对齐方式属性</strong>
+			<p>align="left/center/right"</p>
+			<li><strong>说明文本属性</strong>
+			<p>alt="说明"，当图片无法正常显示时，页面上将显示该文字。</p>
+			</ul>		
+			如&lt;img src="https://crcrc.netlify.app/images/ruchan.png" width="20" height="20" align="center" alt="这是一张图片"&gt;，结果为：<img src="https://crcrc.netlify.app/images/ruchan.png" width="20" height="20" align="center" alt="这是一张图片">
+		</p>
+		</li>
+		<li><strong>表格标记</strong>
+		<p>
+			有表格标记：&lt;table&gt;&lt;/table&gt;；内部的标题标记&lt;caption&gt;和&lt;/caption&gt;；表行标记&lt;tr&gt;和&lt;/tr&gt;；表列标记&lt;/td&gt;。共同使用它们可构造一个常用的表格，如价格表、成绩单。
+		</p>
+		<p>
+			还可引入表格宽度属性：border="像素数"，默认为border="0"，即表格的分割线隐藏不见。
+		</p>
+		<p>
+		可通过如下代码创建一个表格：
+		<p id="code">
+		&lt;table border="1" align="center"&gt;<br>
+		 &lt;caption&gt;蔬菜价格&lt;/caption&gt;<br>
+		 &lt;tr&gt;&lt;th&gt;日期&lt;/th&gt;&lt;th&gt;香菇&lt;/th&gt;&lt;th&gt;青椒&lt;/th&gt;&lt;/tr&gt;<br>
+		 &lt;tr&gt;&lt;th&gt;6.1&lt;/th&gt;&lt;th&gt;13.00&lt;/th&gt;&lt;th&gt;0.90&lt;/th&gt;&lt;/tr&gt;<br>
+		 &lt;tr&gt;&lt;th&gt;6.2&lt;/th&gt;&lt;th&gt;14.00&lt;/th&gt;&lt;th&gt;0.82&lt;/th&gt;&lt;/tr&gt;<br>
+		 &lt;tr&gt;&lt;th&gt;6.3&lt;/th&gt;&lt;th&gt;14.00&lt;/th&gt;&lt;th&gt;0.80&lt;/th&gt;&lt;/tr&gt;<br>
+		&lt;/table&gt;
+		</p>
+		</p>
+		<p>
+		效果为：
+		<table border="1" align="center">
+		 <caption>蔬菜价格</caption>
+		 <tr><th>日期</th><th>香菇</th><th>青椒</th></tr>
+		 <tr><th>6.1</th><th>13.00</th><th>0.90</th></tr>
+		 <tr><th>6.2</th><th>14.00</th><th>0.82</th></tr>
+		 <tr><th>6.3</th><th>14.00</th><th>0.80</th></tr>
+		</table>		
+		</p>
+		</li>
+		<li><strong>水平横线标记</strong>
+		<p>标记为&lt;hr&gt;和&lt;/hrs&gt;，可加入属性：size=""和 color=""</p>
+		</li>		
+		</li>
+		<li><strong>地址标记</strong>
+		<p>标记为&lt;address&gt;和&lt;/address&gt;，其中还可加入邮件超链接，如&lt;a href="mailto:19040097@muc.edu.cn"&gt;发电子邮件&lt;/a&gt;。</p>
+		<p>
+		 对于代码：
+		 <p id="code">
+		 &lt;hr size="3" color="#cc6600"&gt;<br>
+		 &lt;address align="center"&gt;<br>
+		 地址：中央民族大学&lt;br&gt;<br>
+		 电话：888-88888&lt;br&gt;<br>
+		 E-mail：&lt;a href="mailto:19040097@muc.edu.cn"&gt;19040097@muc.edu.cn&lt;/a&gt;<br>
+		 &lt;/hr&gt;
+		 </p>
+		 效果为：
+		 <hr size="3" color="#cc6600">
+		 <address align="center">
+		 地址：中央民族大学<br>
+		 电话：888-88888<br>
+		 E-mail：<a href="mailto:19040097@muc.edu.cn">19040097@muc.edu.cn</a>
+		 </hr>		 
+		</p>
+		</li>
+	</ol>	
+	<h3 id="表单">表单</h3>
+	<p>表单就是像人们申请某项职位，填写自己的情况信息的申请单，在网页上就是多个输入框，用户在框里输入信息之后，按提交按钮向网站发送。正是有了表单，用户可以在网页上向网站提出特定的要求信息，向网站发送后，网站就会接收这些用户信息，分析用户的要求，按照用户的要求在网站中找到用户需要的信息，做成回复网页传给客户。</p>
+	<ol>
+		<li><strong>开始、结束标记</strong>
+		<p>标记为&lt;form&gt;和&lt;/form&gt;，所有的表单输入框和结束按钮都是该元素的内容。</p>
+		</li>
+		<li><strong>单行文本输入框标记</strong>
+		<p>标记为&lt;input type=text name="变量名"&gt;，这种输入框最常用，可用于输入姓名、电话号码等等。</p>
+		<p><em>注意：</em>
+		<ul>
+		<li><strong>type属性</strong>
+		<p>type="某种输入框类型"<br>输入框中的 type 属性指定了输入量的类型，type="text" 表示这是一个单行文本输入框。</p></li>
+		<li><strong>name属性</strong>
+		<p>name="变量名"<br>每个输入框都要设置一个变量，用户输入的信息会保存在这个变量当中，最后向网站发送,没有变量，用户输入的信息就无法保存。变量名是网页制作人自己起的,最好与它的用途保持一致，使人一看就明白。</p></li>
+		<li><strong>value属性</strong>
+		<p>value="预先放在输入框的值（提示）"<br>这个属性可以没有，如果有的话，输入框当中预先放好了值。用户如果对预设值不满意当然可以对这个值进行修改。</p></li>
+		</ul>
+		</p>
+		<p>每种输入框，包括接下来在下面要讲的输入框，在它们的上、下、左、右之一，应该用普通文字写出该输入框用途的提醒文字，以便提示用户输入正确的信息。</p>
+		<p>
+		对于代码：
+		<p id="code">
+		&lt;form align="center"&gt;<br>
+		姓名：&lt;input type="text" name="name1"&gt;&lt;br&gt;<br>
+		电话：&lt;input type="text" name="tele" value="888-8888"&gt;<br>
+		&lt;/form&gt;
+		</p>
+		显示为
+		<form align="center">
+		姓名：<input type="text" name="name1"><br>
+		电话：<input type="text" name="tele" value="888-8888">
+		</form>		
+		</p>
+		</li>
+		<li><strong>口令输入框</strong>
+		<p>具有这两个属性：type="password" maxlength="输入框接受的字符最大数" </p>
+		<p>用户在口令框里输入字符时，不显示真实的字符而用圆点代替。</p>
+		<p>
+		对于代码：
+		<p id="code">
+		&lt;form align="center"&gt;<br>
+		密码：&lt;input type="password" name="mima" maxlength="6"&gt;<br>
+		&lt;/form&gt;
+		</p>
+		显示为
+		<form align="center">
+		密码：<input type="password" name="mima" maxlength="6">
+		</form>		
+		</p>
+		</li>
+		<li><strong>多行文本输入框</strong>
+		<p>标记为&lt;textarea&gt;和&lt;/textarea&gt;，这是一个成对儿的标记，在开始标记中要加入表示行数和列数的属性标记 cols="列数" 和 rows="行数"。</p>
+		<p>
+		对于代码：
+		<p id="code">
+		&lt;form align="center"&gt;<br>
+		&lt;p&gt;请输入你的答案：（最多100字）&lt;/p&gt;<br>
+		&lt;textarea cols="36" rows="6" name="text" style="resize:none" maxlength="100"&gt;&lt;/textarea&gt;<br>
+		&lt;/form&gt;
+		</p>
+		显示为
+		<form align="center">
+		<p>请输入你的答案：（最多100字）</p>
+		<textarea cols="36" rows="6" name="text" style="resize:none" maxlength="100"></textarea>
+		</form>	
+		</p>		
+		</li>
+		<li><strong>单选输入框</strong>
+		<p>类型属性为 type="radio"，可以根据需要设置多个&lt;input&gt;选项，用户将来只能选择一项。每个选项当中还有 value="某值" 的属性。<br>同时每个选项，还有变量名。值得注意的是，所有选项的变量名应该是同一个变量。将来用户选择某一项时，该项的 value 值就会进入到这个同一变量中保存并向网站发送。当网站接收这个变量，检查其中的值，就知道用户在多项中选择了哪一项。<br>当某一项中出现了checked的属性，那么该项就会被预先选中，但是如果用户不满意，可以再点选消除。</p>
+		<p>
+		对于代码：
+		<p id="code">
+		&lt;form align="center"&gt;<br>
+		&lt;p&gt;请选择你最喜欢的运动：&lt;/p&gt;<br>
+		&lt;input type="radio" name="sports" value="跑步" checked&gt;跑步&lt;br&gt;<br>
+		&lt;input type="radio" name="sports" value="游泳"&gt;游泳&lt;br&gt;<br>
+		&lt;input type="radio" name="sports" value="登山"&gt;登山<br>
+		&lt;/form&gt;
+		</p>
+		显示为
+		<form align="center">
+		<p>请选择你最喜欢的运动：</p>
+		<input type="radio" name="sports" value="跑步" checked>跑步<br>
+		<input type="radio" name="sports" value="游泳">游泳<br>
+		<input type="radio" name="sports" value="登山">登山
+		</form>
+		</p>		
+		</li>
+		<li><strong>多选输入框</strong>
+		<p>类型属性为 type="checkbox"，可以根据需要设置多个&lt;input&gt;选项，用户将来能选择其中的多项。每个选项当中还有 value="某值" 的属性。<br>同时每个选项，还有变量名。值得注意的是，所有选项的变量名应该不是同一个变量，也就是每一个选项的变量都是一个单独的不同变量。这一点跟单选输入框是不一样的。将来用户选择某一项时，该项的 value 值就会进入到这个选项的特定变量中保存并向网站发送。当网站接收这些个变量，检查其中有值的变量就知道用户在多项中选择了哪些项。<br> 当某一些项中出现了checked的属性，那么这些项就会被预先选中，但是如果用户不满意，可以再勾选它们消除。</p>
+		<p>
+		对于代码：
+		<p id="code">
+		&lt;form align="center"&gt;<br>
+		&lt;p&gt;请选择你喜欢的节日：（可多选）&lt;/p&gt;<br>
+		&lt;input type="checkbox" name="festival1" value="元旦节" checked&gt;元旦节&lt;br&gt;<br>
+		&lt;input type="checkbox" name="festival2" value="中秋节"&gt;中秋节&lt;br&gt;<br>
+		&lt;input type="checkbox" name="festival3" value="端午节"&gt;端午节&lt;br&gt;<br>
+		&lt;input type="checkbox" name="festival4" value="圣诞节"&gt;圣诞节&lt;br&gt;<br>
+		&lt;input type="checkbox" name="festival5" value="劳动节"&gt;劳动节<br>
+		&lt;/form&gt;
+		</p>
+		显示为
+		<form align="center">
+		<p>请选择你喜欢的节日：（可多选）</p>
+		<input type="checkbox" name="festival1" value="元旦节" checked>元旦节<br>
+		<input type="checkbox" name="festival2" value="中秋节">中秋节<br>
+		<input type="checkbox" name="festival3" value="端午节">端午节<br>
+		<input type="checkbox" name="festival4" value="圣诞节">圣诞节<br>
+		<input type="checkbox" name="festival5" value="劳动节">劳动节
+		</form>	
+		</p>	
+		</li>
+		<li><strong>下拉菜单标记</strong>
+		<p>标记为&lt;select name="变量"&gt;和&lt;/select&gt;，在这一对标记之间，可以根据需要设定多个选项&lt;option&gt;,每个选项的右边应该有提示性文字。用户只能选择一个选项。下拉菜单儿在网页中平时只有一行，点击其上的下箭头，下拉菜单会展开各个选项，供用户点选其中之一。</p>
+		<p>
+		对于代码：
+		<p id="code">
+		&lt;form align="center"&gt;<br>
+		&lt;p&gt;你最喜欢哪个城市？&lt;/p&gt;<br>
+		&lt;select name="city"&gt;<br>
+		&lt;option&gt;北京<br>
+		&lt;option&gt;上海<br>
+		&lt;option&gt;广东<br>
+		&lt;option&gt;江西<br>
+		&lt;/select&gt;<br>
+		&lt;/form&gt;
+		</p>
+		显示为
+		<form align="center">
+		<p>你最喜欢哪个城市？</p>
+		<select name="city">
+		<option>北京
+		<option>上海
+		<option>广东
+		<option>江西
+		</select>
+		</form>
+		</p>	
+		</li>
+		<li><strong>滚动菜单标记</strong>
+		<p>添加属性 multiple size="露出的行数"，在这一对标记之间，可以根据需要设定多个选项&lt;option&gt;，每个选项的右边应该有提示性文字。在开始标记中出现 multiple 属性，意味着将来用户可以进行多选（按住ctrl进行多选），如果没有 multiple 属性，用户只能选择一个选项。<br>如果开始标记中的最后一个属性写成size=5，滚动菜单儿在网页中只漏出5行，点击其上的滚动条会看到其它的选项。</p>
+		<p>
+		对于代码：
+		<p id="code">
+		&lt;form align="center"&gt;<br>
+		&lt;p&gt;你到过哪些城市？&lt;/p&gt;<br>
+		&lt;select name="city" multiple size="3"&gt;<br>
+		&lt;option&gt;北京<br>
+		&lt;option&gt;上海<br>
+		&lt;option&gt;广东<br>
+		&lt;option&gt;江西<br>
+		&lt;option&gt;福建<br>
+		&lt;option&gt;哈尔滨<br>
+		&lt;/select&gt;<br>
+		&lt;/form&gt;
+		</p>
+		显示为
+		<form align="center">
+		<p>你到过哪些城市？</p>
+		<select name="city" multiple size="3">
+		<option>北京
+		<option>上海
+		<option>广东
+		<option>江西
+		<option>福建
+		<option>哈尔滨
+		</select>
+		</form>
+		</p>	
+		</li>
+		<li><strong>提交标记和重置按钮标记</strong>
+		<p>标记为：<br>&lt;input type="submit" value="提交"&gt;<br>&lt;input type="reset" value="重置"&gt;</p>
+		<p>用户点击提交按钮之后，本表单所有输入框的变量，也就是表单变量就立即装着用户输入的各种信息向网站发送。网站接到这些变量，会取出它们保存的用户信息进行分析，然后酌情分别处理最后给用户答复。</p>
+		<p>
+		对于代码：
+		<p id="code">
+		&lt;form align="center"&gt;<br>
+		&lt;input type="submit" value="提交"&gt;&amp;nbsp;&amp;nbsp;&lt;input type="reset" value="重置"&gt;<br>
+		&lt;/form&gt;
+		</p>
+		显示为
+		<form align="center">
+		<input type="submit" value="提交">&nbsp;&nbsp;<input type="reset" value="重置">
+		</form>
+		</p>	
+		</li>		
+	</ol>
+	<p>
+	</p>
+	<a href="javascript:window.scrollTo(0,0)" class="btn" title="回到顶端"></a>
+</body>
+</html>

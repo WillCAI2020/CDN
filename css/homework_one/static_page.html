@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>homework_one</title>
-	<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/WillCAI2020/cdn/css/homework_one.css">
+	<link type="text/css" rel="stylesheet" href="homework_one.css">
 </head>
 <body>
 	<div class="header">
@@ -27,7 +27,7 @@
 		我们看话剧的时候看到的是演员照着剧本演出的结果，观众是不用看剧本的。
 		<br>&emsp;&emsp;网页文件就是剧本或叫做脚本，隐藏在后台，其中包含演出内容和如何进行演出的指令。而浏览器就是演员，它在前台按照网页文件这个“剧本或者脚本”事先写好的内容和规定进行表演、展示。用户看到的是浏览器(遵照网页文件内写好的规定)进行“演出”的结果。<br>
 		<div class="container">
-		<img src="work.png" title="图片来自 Head First HTML 与 CSS" alt="工作">
+		<img src="https://cdn.jsdelivr.net/gh/WillCAI2020/cdn/css/homework_one/work.png" title="图片来自 Head First HTML 与 CSS" alt="工作">
 		</div>
 	</p>
 	
@@ -91,6 +91,9 @@
 			<p>如白色用 rgb(100%,100%,100%) 表示，橙色用 rgb(80%,40%,0%) 表示。<br>还可以将红、绿、蓝指定为0到255之间的一个数值，如橙色可用 rgb(204,102,0) 表示。</p>
 			<li><strong>使用十六进制码指定</strong>
 			<br>以“#”开头，其中每组两位数字分别代表颜色的红、绿、蓝分量，每位数都是一个十六进制数，橙色可用 #cc6600 表示，可将每组数转化为一个0到255的数，转化方法如下：</p>
+			<div class="container">
+			<img src="https://cdn.jsdelivr.net/gh/WillCAI2020/cdn/css/homework_one/color-trans.png" title="图片来自 Head First HTML 与 CSS" alt="color-trans">
+			</div>			
 			</ul>
 		</p>		
 		</li>
@@ -157,7 +160,13 @@
 			在浏览器输入的 Web 地址称为 URL，或统一资源定位符（Uniform Resource Locators），它是一个全局地址，可用来定位 Web 上的任意资源，包括 HTML 页面、音频、视频和其它很多形式的 Web 内容。<br>
 			除了指定资源的位置，URL 还可以指定用来获取资源的协议：HTTP（HyperText Transfer Protocol）也称为超文本传输协议。
 			</blockquote>
-			使用&lt;a href="https://vpn.muc.edu.cn/portal/#!/login"&gt;前往民大VPN登陆界面&lt;/a&gt;，效果为：<a href="https://vpn.muc.edu.cn/portal/#!/login">前往民大VPN登陆界面</a>
+		</p>
+		<p>
+			title 属性：用来提供链接信息。<br>
+			target 属性：可以控制浏览器打开一个新的窗口（或新标签页）来显示链接到的网页。设置为<em> target="_blank"</em>。
+		</p>
+		<p>
+			使用&lt;a href="https://vpn.muc.edu.cn/portal/#!/login" title="前往民大VPN登陆界面" target="_blank" &gt;前往民大VPN登陆界面&lt;/a&gt;，效果为：<a href="https://vpn.muc.edu.cn/portal/#!/login" title="前往民大VPN登陆界面" target="_blank" >前往民大VPN登陆界面</a>
 		</p>
 		</li>
 		<li><strong>图像标记</strong>

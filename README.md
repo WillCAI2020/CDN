@@ -36,7 +36,6 @@ https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/src/core.min.js
 
 https://cdn.jsdelivr.net/gh/jquery/jquery/
 
-
 https://cdn.jsdelivr.net/gh/用户名/仓库名@版本号/文件路径
 若无版本号，‘@v1.0’ 删除
 例：https://cdn.jsdelivr.net/gh/WillCAI2020/cdn/css/homework_one/homework_one.css

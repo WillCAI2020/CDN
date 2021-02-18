@@ -1,0 +1,563 @@
+/****************************************/
+/*************Header begin***************/
+/****************************************/
+/* 圆角 */
+.header-inner, ///顶部圆角
+.sidebar-inner { //侧边头像圆角
+  border-radius: $myradius;
+}
+
+.site-brand-container {
+  border-radius: $myradius $myradius 0 0;
+
+  +mobile() {
+    border-radius: 0 0 $myradius $myradius;
+  }
+}
+/****************************************/
+/*************Header end*****************/
+/****************************************/
+
+/****************************************/
+/*************Sidebar begin**************/
+/****************************************/
+/* sidebar-二级菜单圆角 */
+.sub-menu {
+  border-radius: $myradius !important;
+}
+
+/* sidebar-标题背景 */
+.site-brand-container {
+  background: url(https://cdn.jsdelivr.net/gh/WillCAI2020/cdn/images/header-bg2.jpg);
+  background-position: 70% 20%;
+  background-size: cover;
+  
+  +mobile() {
+	background: url(https://cdn.jsdelivr.net/gh/WillCAI2020/cdn/images/header-bg1.jpg);
+  }
+}
+
+/* sidebar-标题 */
+.site-title {
+  color: #91ffa7;
+  font-family: Comic Sans MS;
+  font-weight: bold;
+}
+
+/* sidebar-副标题 */
+.site-subtitle {
+  font-weight: bold;
+  font-family: "EB Garamond", STKaiti, KaiTi, SimKai, DFKai-SB, "Noto Serif SC";
+  color: #edf8f9;
+  font-size: 1.2em;
+}
+
+/* sidebar-站点描述介绍 */
+.site-description {
+  color: var(--blockquote-color);
+}
+
+/* 取消头像边框 */
+.site-author-image{
+  border: 0 !important;
+}
+
+// 粒子时钟样式
+.site-overview {
+  text-align: center;
+}
+
+canvas#canvas {
+  margin-top: 20px;
+}
+/****************************************/
+/*************Sidebar end****************/
+/****************************************/
+
+
+/****************************************/
+/*************Post begin*****************/
+/****************************************/
+
+// 加密abstract样式
+.article_encrypt_abstract {
+    text-align: center;
+    color: #FFBE3D;
+    font-size: 28px;
+    -webkit-text-stroke: 1.2px #000000;
+}
+
+/*主体圆角*/
+/*主体透明度*/
+.main-inner {
+	border-radius: $myradius;
+	margin-bottom: 10px !important;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* 修改选中字符的颜色 */
+::selection {
+  background: rgba(255, 165, 0, 0.5);
+  color: #9932CC;
+}
+
+//透明度
+.post-block{
+//	background-color: rgba(255,255,255,0.7) !important;		//透明度不会被继承（多重子元素将看不到底层元素）
+	opacity: 0.88;											//会被继承
+}
+
+/* post-文章卡片圆角 */
+.post,
+.post-block,
+.post-block+.post-block{
+  border-radius: $myradius !important;
+}
+
+/*适配mobile*/
+@media screen and (min-width: 1200px){
+	/*主页文章添加阴影效果*/
+	.post {
+	   margin-top: 0px;
+	   margin-bottom: 60px;
+	   padding: 25px 0px;
+	   -webkit-box-shadow: 0 0 5px rgba(250, 128, 114, 1.5);
+	   -moz-box-shadow: 0 0 5px rgba(202, 203, 204, .5);
+	}
+	
+	// 标题
+	.post-title {
+		color: black;
+		letter-spacing: 12px;
+		font-family: Comic Sans MS;
+		text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+	}	
+	/* post块 */
+	.post-block{
+		margin: 0px 36px 24px 36px;
+		//margin-bottom: 24px;
+		padding: 24px;
+		border-radius: 30px 30px 30px 30px;
+		box-shadow: 8px 7px 2px 0 rgba(0,0,0,0.12), 7px 4px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
+	}
+	/* 子菜单栏 */
+	.sub-menu{
+		margin: 0px 36px 0px 36px;
+	}
+}
+
+/* 顶部空白,适配mobile */
+
+.header, .main-inner {
+	margin-top: 10px;
+
+	+mobile() {
+		margin-top: 0;
+	}
+}
+
+/* post-超链接 */
+.post-body p a,
+.post-body li a{
+  color: #4169E1;
+  border-bottom: none;
+  border-bottom: 1px solid #0593d3;
+  &:hover {
+    color: #FFD700;
+    border-bottom: none;
+    border-bottom: 1px solid #fc6423;
+  }
+}
+
+/*置顶字体样式设计*/
+#post_top{
+	font-weight: bold;
+	color: #fb10c8;
+}
+
+.post-body h2{
+	background: #bb3d00;
+	border-radius: 6px;
+	border: none;
+	border-shadow: 0 0 0 1px #5f5a4b, 1px 1px 6px 1px rgb(10, 10, 0, 0.5);
+	color: white;
+	font-family: "楷体";
+	font-size: 1.23em;
+	line-height: 1.4;
+	margin: 18px 0px 18px -12px !important;
+	padding: 10px;
+}
+.post-body h3{
+	background: #808000;
+	border-radius: 6px;
+	border: none;
+	border-shadow: 0 0 0 1px #5f5a4b, 1px 1px 6px 1px rgb(10, 10, 0, 0.5);
+	color: white;
+	font-family: "楷体";
+	font-size: 1.105em;
+	line-height: 1;
+	margin: 18px 0 18px 0px !important;
+	padding: 10px;
+}
+code{
+	opacity: 1;
+	color: #ff3502;
+	background-color: #F5DEB3 !important
+}
+
+/* post-图片标题 */
+.post-body .image-caption {
+  margin: 0 auto 15px;
+}
+
+/* post-图片阴影 */
+.posts-expand .post-body img {
+  border-radius: 18px;
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, .4);
+}
+
+
+/* post-段后距 */
+p {
+  margin-bottom: 12px;
+}
+
+/* post-首页文章信息 */
+.index .leancloud_visitors{
+  display: none !important;
+}
+
+/* 美化 hr 样式 */
+hr {
+    position: relative;
+    margin: 2rem auto;
+    width: calc(100% - 4px);
+    border: 2px dashed #a4d8fa;
+    background: #fff;
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+/****************************************/
+/*************Post end*******************/
+/****************************************/
+
+/****************** Page ********************/
+/****************************************/
+/*************网页背景 begin*************/
+/****************************************/
+body {
+    //background-image:url(/images/background.jpg);
+	//background-image:url(/images/body-bg.png);
+	background-image: url(https://cdn.jsdelivr.net/gh/WillCAI2020/cdn/images/background5.png);
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: top center;
+}
+/****************************************/
+/*************网页背景 end***************/
+/****************************************/
+
+/****************************************/
+/*************pagination begin***********/
+/****************************************/
+/* pagination-删去页码框 */
+.pagination {
+  border: none !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+/* pagination-页码按钮 */
+.pagination .prev,
+.pagination .next,
+.pagination .page-number {
+  color: white;
+  border: none;
+  border-radius: 1em;
+
+  &:hover {
+    color: red;
+    background: $btn-default-hover-bg;
+    btn-shadow-hover-only();
+  }
+}
+
+/* pagination-当前页码 */
+.pagination .page-number.current {
+  opacity: 0.5
+  background: #4b0080;
+  btn-shadow-only();
+}
+/****************************************/
+/*************pagination end*************/
+/****************************************/
+
+/****************************************/
+/*************标签页面 begin*************/
+/****************************************/
+/*彩色标签页面*/
+.tag-cloud {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    background-color: #797D7F;
+    padding: 20px 30px 40px 30px;
+    border-radius: 25px 25px 25px 25px;
+}
+.tag-cloud-title {
+    font-family: Impact;
+    font-size: 24px;
+    color: aqua;
+	margin-bottom: 36px;
+}
+
+.tag-cloud-tags{
+  /*font-family: Helvetica, Tahoma, Arial;*/
+  /*font-weight: 100;*/
+  text-align: center;
+  counter-reset: tags;
+  margin-bottom: 24px;
+}
+.tag-cloud-tags a{
+  border-radius: 6px;
+  padding-right: 5px;
+  padding-left: 5px;
+  margin: 8px 5px 0px 0px;
+  color: white;
+}
+.tag-cloud-tags a:before{
+  content: "🔖";
+}
+
+.tag-cloud-tags a:hover{
+   box-shadow: 0px 5px 15px 0px rgba(0,0,0,.4);
+   color: aqua;
+   transform: scale(1.1);
+   /*box-shadow: 10px 10px 15px 2px rgba(0,0,0,.12), 0 0 6px 0 rgba(104, 104, 105, 0.1);*/
+   transition-duration: 0.15s;
+}
+
+
+/*文章底部标签样式*/
+.posts-expand .post-tags a {
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+  font-family: 'Comic Sans MS', sans-serif;
+  transition: .2s ease-out;
+  padding: 3px 5px;
+  margin: 5px;
+  background: #f5f5f5;
+  border-bottom: none;
+  border-radius: 15px;
+
+  +mobile(){
+    padding: 1px 3px;
+    font-size: 8px;
+  }
+
+  &:hover {
+    background: rgba(100,154,182,0.902);
+    color: #fff;
+    -webkit-box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    -moz-box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+}
+/****************************************/
+/*************标签页面 end***************/
+/****************************************/
+
+/****************************************/
+/*************分类页面 begin*************/
+/****************************************/
+.category-all-page {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    background-color: #797D7F;
+    padding: 20px 30px 40px 30px;
+    border-radius: 25px 25px 25px 25px;
+}
+.category-all-title {
+    font-family: Impact;
+    font-size: 24px;
+    color: aqua;
+}
+//数字
+.category-list-count{
+	color: aqua !important;
+}
+//限制电脑
++tablet-desktop() {
+  .category-list-item {
+    margin: 10px 12px;
+  }
+
+  ul.category-list {
+    text-align: center;
+  }
+
+  li.category-list-item {
+    display: inline-block;
+  }
+
+  li.category-list-item a {
+    line-height: 5;
+    word-break: keep-all;
+    padding: 10px 15px;
+    font-weight: bold;
+    color: white;
+    background: #4a3b4a;
+    border-bottom: none;
+    border-radius: 15px;
+    btn-shadow();
+
+    &:hover {
+	  color: aqua;
+      text-decoration: none;
+    }
+  }
+}
+
++mobile() {
+  .category-all-page .category-list-item {
+    margin: 10px 40px;
+  }
+  
+  li.category-list-item a {
+	color: white;
+  }
+
+  .category-all-page .category-all ul {
+    list-style-type: disc;
+  }
+}
+/****************************************/
+/*************分类页面 end***************/
+/****************************************/
+
+/****************************************/
+/*************友链页面 begin*************/
+/****************************************/
+.links-content {
+  margin: 1em 0px 1em 0px;
+}
+
+.link-navigation_dalao::after,
+.link-navigation::after{
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.link-navigation_dalao,
+.link-navigation{
+  display: inline-block;
+  width: 100%;
+}
+
+.blogroll {
+  width: 25%;
+  background: #f8f6f6;
+  border: 1px solid #ececec;
+  border-radius: 6px;
+  padding: 10px 10px 10px 30px;
+  margin: 10px;
+  display: flex;
+  float: left;
+  transition-duration: 0.5s, 0.5s;
+  transition-property: width, background;
+	+mobile() {
+		width: 80%;
+	}  
+}
+.blogroll:hover {
+  width: 25.5%;
+  border: 1px solid orange;
+  background: #fbe5b9;
+  	+mobile() {
+		width: 81%;
+	}  
+}
+.blogroll .friend {
+  text-decoration: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.blogroll .name {
+  font-weight: bold;
+  margin: 0.375em 0;
+}
+.blogroll .excerpt {
+  font-size: 0.875em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  border-top: 1px dashed #ddd;
+}
+.blogroll .avatar {
+  width: 4em !important;
+  height: 4em !important;
+  margin: 0 1em 0 0 !important;
+  z-index: 0;
+  box-shadow: inset 0 0 10px #000 !important;
+}
+/****************************************/
+/*************友链页面 end***************/
+/****************************************/
+
+/****************************************/
+/*************搜索页面 begin*************/
+/****************************************/
+.search-popup .search-header{
+	background: #a4aaae;
+	border-radius: 5px 5px 30% 30%;
+}
+/****************************************/
+/*************搜索页面 end***************/
+/****************************************/
+
+/****************************************/
+/*************滚动条 begin***************/
+/****************************************/
+::-webkit-scrollbar {	//滚动条整体部分
+        width: 9px;
+        height: 9px;
+}
+::-webkit-scrollbar-track {		//滚动条的轨道（里面装有Thumb）
+    background: #f6f6f6;
+    border-radius: 2px;
+}
+::-webkit-scrollbar-thumb {		// 滚动条里面的小方块，能向上向下移动（或往左往右移动，取决于是垂直滚动条还是水平滚动条）	
+    background: #aaa;
+    border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #747474;
+}
+::-webkit-scrollbar-corner {
+    background: #f6f6f6;
+}
+// ::-webkit-scrollbar-button 滚动条的轨道的两端按钮，允许通过点击微调小方块的位置。
+// ::-webkit-scrollbar-track-piece 内层轨道，滚动条中间部分（除去）
+// ::-webkit-scrollbar-corner 边角，即两个滚动条的交汇处
+// ::-webkit-resizer 两个滚动条的交汇处上用于通过拖动调整元素大小的小控件
+/****************************************/
+/*************滚动条 end*****************/
+/****************************************/
+
+
+/****************** Footer ********************/
+/*footer元素置底*/
+.main{
+	min-height: 86%;
+}
+
+
+/*设置footer*/
+.footer{
+	margin-top: 20px;
+	color: #2F4F4F;
+}

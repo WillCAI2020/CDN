@@ -5559,9 +5559,22 @@ object-assign
         (e.exports = a);
     },
     function (e) {
+      function a(e) {
+        return "newqq/qq (" + e + ").gif";
+      }
+      function t(e) {
+        return "newtieba/tieba (" + e + ").png";
+      }
+      function n(e) {
+        return "bilibili/bilibili (" + e + ").png";
+      }
       function r(e) {
         return "alu/alu (" + e + ").png";
       }
+      for (var o = 1; 69 > o; o++) e.exports["qq-" + o] = a(o);
+      for (var o = 1; 29 > o; o++) e.exports["tieba-" + o] = t(o);
+      for (var o = 1; 50 > o; o++) e.exports["bili-" + o] = n(o);      
+      for (var o = 1; 42 > o; o++) e.exports["alu-" + o] = r(o);
       e.exports = {
         彩虹滑稽: "https://cdn.jsdelivr.net/gh/drew233/cdn/caihongtiao.webp",
         点赞: "https://cdn.jsdelivr.net/gh/drew233/cdn/kawayi.webp",
@@ -5572,8 +5585,28 @@ object-assign
         开心: "https://cdn.jsdelivr.net/gh/drew233/cdn/20200409104757.webp",
         扣手手: "https://cdn.jsdelivr.net/gh/drew233/cdn/20200409130304.webp",
         仙女下凡: "https://cdn.jsdelivr.net/gh/drew233/cdn/20200409130301.webp",
+        伸手: "https://cdn.jsdelivr.net/gh/WillCAI2020/CDN@1.0.1/emotion/QQ/1.png",   
+        bieqi: "https://cdn.jsdelivr.net/gh/WillCAI2020/CDN@1.0.1/emotion/QQ/bieqi.jpg",
+        chahan: "https://cdn.jsdelivr.net/gh/WillCAI2020/CDN@1.0.1/emotion/QQ/chahan.jpg",
+        shuijiao: "https://cdn.jsdelivr.net/gh/WillCAI2020/CDN@1.0.1/emotion/QQ/shuijiao.jpg",
+        touxiao: "https://cdn.jsdelivr.net/gh/WillCAI2020/CDN@1.0.1/emotion/QQ/touxiao.jpg",
+        tuxue: "https://cdn.jsdelivr.net/gh/WillCAI2020/CDN@1.0.1/emotion/QQ/tuxue.jpg",
+        啊哈: "https://cdn.jsdelivr.net/gh/WillCAI2020/CDN@1.0.1/emotion/QQ/啊哈.jpg",
+        斜眼看: "https://cdn.jsdelivr.net/gh/WillCAI2020/CDN@1.0.1/emotion/QQ/斜眼看.jpg",
+        打哈欠: "https://cdn.jsdelivr.net/gh/WillCAI2020/CDN@1.0.1/emotion/QQ/打哈欠.jpg",
+        生气: "https://cdn.jsdelivr.net/gh/WillCAI2020/CDN@1.0.1/emotion/QQ/生气.jpg",
+        委屈: "https://cdn.jsdelivr.net/gh/WillCAI2020/CDN@1.0.1/emotion/QQ/委屈.jpg",
+        比心: "https://cdn.jsdelivr.net/gh/WillCAI2020/CDN@1.0.1/emotion/QQ/比心.gif",
+        夹筷子: "https://cdn.jsdelivr.net/gh/WillCAI2020/CDN@1.0.1/emotion/QQ/2.gif",
+        吹箫: "https://cdn.jsdelivr.net/gh/WillCAI2020/CDN@1.0.1/emotion/QQ/3.gif",
+        弹琴: "https://cdn.jsdelivr.net/gh/WillCAI2020/CDN@1.0.1/emotion/QQ/4.gif",
+        喝茶: "https://cdn.jsdelivr.net/gh/WillCAI2020/CDN@1.0.1/emotion/QQ/喝茶.gif",
+        晃头: "https://cdn.jsdelivr.net/gh/WillCAI2020/CDN@1.0.1/emotion/QQ/晃头.gif",   
+        摇尾巴: "https://cdn.jsdelivr.net/gh/WillCAI2020/CDN@1.0.1/emotion/QQ/摇尾巴.gif",
+        喝奶茶: "https://cdn.jsdelivr.net/gh/WillCAI2020/CDN@1.0.1/emotion/QQ/喝奶茶.png",
+        睡觉: "https://cdn.jsdelivr.net/gh/WillCAI2020/CDN@1.0.1/emotion/fangzhou/睡觉.jpg",
+        洗澡: "https://cdn.jsdelivr.net/gh/WillCAI2020/CDN@1.0.1/emotion/fangzhou/洗澡.jpg"
       };
-      for (var o = 1; 5 > o; o++) e.exports["alu-" + o] = r(o);
     },
     function (e, t) {
       e.exports = {

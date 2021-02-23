@@ -5559,6 +5559,9 @@ object-assign
         (e.exports = a);
     },
     function (e) {
+      function s(e) {
+        return "sina/sina (" + e + ").png";
+      }
       function a(e) {
         return "newqq/qq (" + e + ").gif";
       }
@@ -5601,8 +5604,9 @@ object-assign
         摇尾巴: "https://cdn.jsdelivr.net/gh/WillCAI2020/CDN@1.0.1/emotion/QQ/摇尾巴.gif",
         喝奶茶: "https://cdn.jsdelivr.net/gh/WillCAI2020/CDN@1.0.1/emotion/QQ/喝奶茶.png",
         睡觉: "https://cdn.jsdelivr.net/gh/WillCAI2020/CDN@1.0.1/emotion/fangzhou/睡觉.jpg",
-        洗澡: "https://cdn.jsdelivr.net/gh/WillCAI2020/CDN@1.0.1/emotion/fangzhou/洗澡.jpg"
-      };      
+        洗澡: "https://cdn.jsdelivr.net/gh/WillCAI2020/CDN@1.0.1/emotion/fangzhou/洗澡.jpg",
+      };
+      for (var o = 1; 45 > o; o++) e.exports["sina-" + o] = s(o);      
       for (var o = 1; 69 > o; o++) e.exports["qq-" + o] = a(o);
       for (var o = 1; 29 > o; o++) e.exports["tieba-" + o] = t(o);
       for (var o = 1; 50 > o; o++) e.exports["bili-" + o] = n(o);      

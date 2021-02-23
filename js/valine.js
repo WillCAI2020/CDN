@@ -5571,10 +5571,6 @@ object-assign
       function r(e) {
         return "alu/alu (" + e + ").png";
       }
-      for (var o = 1; 69 > o; o++) e.exports["qq-" + o] = a(o);
-      for (var o = 1; 29 > o; o++) e.exports["tieba-" + o] = t(o);
-      for (var o = 1; 50 > o; o++) e.exports["bili-" + o] = n(o);      
-      for (var o = 1; 42 > o; o++) e.exports["alu-" + o] = r(o);
       e.exports = {
         彩虹滑稽: "https://cdn.jsdelivr.net/gh/drew233/cdn/caihongtiao.webp",
         点赞: "https://cdn.jsdelivr.net/gh/drew233/cdn/kawayi.webp",
@@ -5606,7 +5602,11 @@ object-assign
         喝奶茶: "https://cdn.jsdelivr.net/gh/WillCAI2020/CDN@1.0.1/emotion/QQ/喝奶茶.png",
         睡觉: "https://cdn.jsdelivr.net/gh/WillCAI2020/CDN@1.0.1/emotion/fangzhou/睡觉.jpg",
         洗澡: "https://cdn.jsdelivr.net/gh/WillCAI2020/CDN@1.0.1/emotion/fangzhou/洗澡.jpg"
-      };
+      };      
+      for (var o = 1; 69 > o; o++) e.exports["qq-" + o] = a(o);
+      for (var o = 1; 29 > o; o++) e.exports["tieba-" + o] = t(o);
+      for (var o = 1; 50 > o; o++) e.exports["bili-" + o] = n(o);      
+      for (var o = 1; 42 > o; o++) e.exports["alu-" + o] = r(o);
     },
     function (e, t) {
       e.exports = {

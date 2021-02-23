@@ -644,7 +644,7 @@
       "use strict";
       t.__esModule = !0;
       (t.DEFAULT_EMOJI_CDN =
-        "https://cdn.jsdelivr.net/gh/Sanarous/files/emojis/"),
+        "https://cdn.jsdelivr.net/gh/WillCAI2020/CDN/emotion/"),
         (t.DB_NAME = "Comment"),
         (t.defaultConfig = {
           lang: "zh-CN",
@@ -5559,17 +5559,8 @@ object-assign
         (e.exports = a);
     },
     function (e) {
-      function t(e) {
-        return "oldtieba/tieba-" + e + ".png";
-      }
-      function a(e) {
-        return "qq/qq-" + e + ".gif";
-      }
-      function n(e) {
-        return "bilibili/bili_" + e + ".png";
-      }
       function r(e) {
-        return "aru/aru (" + e + ").png";
+        return "alu/alu (" + e + ").png";
       }
       e.exports = {
         彩虹滑稽: "https://cdn.jsdelivr.net/gh/drew233/cdn/caihongtiao.webp",
@@ -5582,10 +5573,7 @@ object-assign
         扣手手: "https://cdn.jsdelivr.net/gh/drew233/cdn/20200409130304.webp",
         仙女下凡: "https://cdn.jsdelivr.net/gh/drew233/cdn/20200409130301.webp",
       };
-      for (var o = 1; 44 > o; o++) e.exports["tieba-" + o] = t(o);
-      for (var o = 1; 140 > o; o++) e.exports["qq-" + o] = a(o);
-      for (var o = 1; 50 > o; o++) e.exports["bili-" + o] = n(o);
-      for (var o = 1; 164 > o; o++) e.exports["aru-" + o] = r(o);
+      for (var o = 1; 5 > o; o++) e.exports["alu-" + o] = r(o);
     },
     function (e, t) {
       e.exports = {

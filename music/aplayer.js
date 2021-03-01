@@ -27,6 +27,7 @@ function setAPlayerObserver() {
 	try {
 		APlayerController.player.on('play', function (e) {
 			updateAPlayerControllerStatus();
+			setData();
 		});
 		APlayerController.player.on('pause', function (e) {
 			updateAPlayerControllerStatus();
@@ -38,7 +39,39 @@ function setAPlayerObserver() {
 			// 跳到下一曲时更新标题
 			updateTitle();
 		});
-
+	$(document).ready(function(){
+		checkAPlayer();
+	  //获取记录,如果有数据就续播
+	  if (typeof (Storage) !== 'undefined' && sessionStorage.getItem('playStatus') !== null) {
+		  //获取保存的播放记录
+		  var index = sessionStorage.getItem('musicIndex');
+		  var playStatus = sessionStorage.getItem('playStatus');
+		  var currentTime = sessionStorage.getItem('currentTime');
+		  var mode = sessionStorage.getItem('mode');
+		  var list = sessionStorage.getItem('list');
+		  var lrc = sessionStorage.getItem('lrc');
+		  try {
+			APlayerController.player.list.switch(index);
+			APlayerController.player.setMode(mode);
+			//跳转到指定下标歌曲
+			lrc === "false"
+			  ? APlayerController.player.lrc && APlayerController.player.lrc.show()
+			  : (APlayerController.player.template.lrcButton.classList.add(
+				  "aplayer-icon-lrc-inactivity"
+				),
+				APlayerController.player.lrc && APlayerController.player.lrc.hide());
+			list === "false"
+			  ? APlayerController.player.list.show()
+			  : APlayerController.player.list.hide(); //显示播放列表
+			APlayerController.player.audio.currentTime = currentTime; //设置播放进度		
+		  } catch (error) {
+			console.log(error);
+		  }
+		  if(playStatus === 'false'){  //如果播放状态不是暂停,就播放
+			  APlayerController.player.play();
+		  }
+	  }
+	})
 		// 监听音量手势
 		APlayerController.volumeBarWrap = document.getElementsByClassName('nav volume')[0].children[0];
 		APlayerController.volumeBar = APlayerController.volumeBarWrap.children[0]
@@ -166,3 +199,24 @@ function updateTitle() {
 
 
 })(jQuery);
+
+function setData() {
+	checkAPlayer();
+  //不断循环记录播放进度
+  setInterval(function () {
+      //检测是否支持本地存储
+      if (typeof (Storage) !== 'undefined') {
+		  try {
+			  //把播放进度等数据存入sessionStorage存储中
+			  window.sessionStorage.setItem('playStatus', APlayerController.player.audio.paused);
+			  window.sessionStorage.setItem('currentTime', APlayerController.player.audio.currentTime);
+			  window.sessionStorage.setItem('musicIndex', APlayerController.player.list.index);
+			  window.sessionStorage.setItem('mode', APlayerController.player.mode);
+			  window.sessionStorage.setItem('list', APlayerController.player.template.list.classList.contains("aplayer-list-hide"));
+			  window.sessionStorage.setItem('lrc', APlayerController.player.template.lrcButton.classList.contains("aplayer-icon-lrc-inactivity"));
+		  }catch (error) {
+			  console.log(error);
+		  }
+      }
+  }, 100);
+}

@@ -8,9 +8,9 @@ var SCREEN_HEIGHT = 448;//屏幕高
 
 /**************图片资源*****************/
 var MENU_IMAGE = new Image();
-MENU_IMAGE.src = "https://cdn.jsdelivr.net/gh/w4j1e/blog@master/js/tank/menu.gif";
+MENU_IMAGE.src = "https://cdn.jsdelivr.net/gh/WillCAI2020/cdn@1.2.8/js/tool/tank/menu.gif";
 var RESOURCE_IMAGE = new Image();
-RESOURCE_IMAGE.src = "https://cdn.jsdelivr.net/gh/w4j1e/blog@master/js/tank/tankAll.gif";
+RESOURCE_IMAGE.src = "https://cdn.jsdelivr.net/gh/WillCAI2020/cdn@1.2.8/js/tool/tank/tankAll.gif";
 
 
 /**************各个图块在图片中的位置*****************/
@@ -34,13 +34,13 @@ POS["over"] = [384,64];
 POS["prop"] = [256,110];
 
 /**************声音资源*****************/
-var START_AUDIO = new Audio("https://cdn.jsdelivr.net/gh/w4j1e/blog@master/js/tank/start.mp3");
-var BULLET_DESTROY_AUDIO = new Audio("https://cdn.jsdelivr.net/gh/w4j1e/blog@master/js/tank/bulletCrack.mp3");
-var TANK_DESTROY_AUDIO = new Audio("https://cdn.jsdelivr.net/gh/w4j1e/blog@master/js/tank/tankCrack.mp3");
-var PLAYER_DESTROY_AUDIO = new Audio("https://cdn.jsdelivr.net/gh/w4j1e/blog@master/js/tank/playerCrack.mp3");
-var MOVE_AUDIO = new Audio("https://cdn.jsdelivr.net/gh/w4j1e/blog@master/js/tank/move.mp3");
-var ATTACK_AUDIO = new Audio("https://cdn.jsdelivr.net/gh/w4j1e/blog@master/js/tank/attack.mp3");
-var PROP_AUDIO = new Audio("https://cdn.jsdelivr.net/gh/w4j1e/blog@master/js/tank/prop.mp3");
+var START_AUDIO = new Audio("https://cdn.jsdelivr.net/gh/WillCAI2020/cdn@1.2.8/js/tool/tank/start.mp3");
+var BULLET_DESTROY_AUDIO = new Audio("https://cdn.jsdelivr.net/gh/WillCAI2020/cdn@1.2.8/js/tool/tank/bulletCrack.mp3");
+var TANK_DESTROY_AUDIO = new Audio("https://cdn.jsdelivr.net/gh/WillCAI2020/cdn@1.2.8/js/tool/tank/tankCrack.mp3");
+var PLAYER_DESTROY_AUDIO = new Audio("https://cdn.jsdelivr.net/gh/WillCAI2020/cdn@1.2.8/js/tool/tank/playerCrack.mp3");
+var MOVE_AUDIO = new Audio("https://cdn.jsdelivr.net/gh/WillCAI2020/cdn@1.2.8/js/tool/tank/move.mp3");
+var ATTACK_AUDIO = new Audio("https://cdn.jsdelivr.net/gh/WillCAI2020/cdn@1.2.8/js/tool/tank/attack.mp3");
+var PROP_AUDIO = new Audio("https://cdn.jsdelivr.net/gh/WillCAI2020/cdn@1.2.8/js/tool/tank/prop.mp3");
 
 
 /**************游戏状态*****************/
